@@ -1,9 +1,8 @@
-package bbolt_test
+package bolt_test
 
 import (
+	"bolt"
 	"testing"
-
-	bolt "go.etcd.io/bbolt"
 )
 
 func TestSimulateNoFreeListSync_1op_1p(t *testing.T) {

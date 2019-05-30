@@ -1,17 +1,18 @@
 language: go
-go_import_path: go.etcd.io/bbolt
 
-sudo: false
+env:
+  global:
+    - GO111MODULE=on
 
 go:
-- 1.11
+  - "1.12.5"
 
 before_install:
-- go get -v honnef.co/go/tools/...
-- go get -v github.com/kisielk/errcheck
+  - go get -v honnef.co/go/tools/...
+  - go get -v github.com/kisielk/errcheck
 
 script:
-- make fmt
-- make test
-- make race
-# - make errcheck
+  - make fmt
+  - make test
+  - make race
+#  - make errcheck

@@ -1,4 +1,4 @@
-package bbolt_test
+package bolt_test
 
 import (
 	"bytes"
@@ -6,6 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/lfserv/bolt"
 	"hash/fnv"
 	"io/ioutil"
 	"log"
@@ -17,8 +18,6 @@ import (
 	"testing"
 	"time"
 	"unsafe"
-
-	bolt "go.etcd.io/bbolt"
 )
 
 var statsFlag = flag.Bool("stats", false, "show performance stats")

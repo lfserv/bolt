@@ -1,17 +1,16 @@
-package bbolt_test
+package bolt_test
 
 import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
+	"github.com/lfserv/bolt"
 	"log"
 	"os"
 	"reflect"
 	"sort"
 	"testing"
 	"testing/quick"
-
-	bolt "go.etcd.io/bbolt"
 )
 
 // Ensure that a cursor can return a reference to the bucket that created it.
